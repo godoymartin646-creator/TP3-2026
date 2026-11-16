@@ -3,7 +3,7 @@ import { api } from '../api.js';
 
 const EMAIL_VALIDO = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Valida los campos del formulario y devuelve un objeto de errores
+//Valida los campos del formulario y devuelve un objeto con los errores encontrados. Si es registro, valida también el nombre.
 const validar = (datos, esRegistro) => {
   const errores = {};
   if (esRegistro && !datos.nombre.trim()) errores.nombre = 'El nombre es obligatorio';

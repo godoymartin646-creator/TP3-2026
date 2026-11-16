@@ -1,4 +1,4 @@
-// Cliente fetch hacia la API REST; agrega el token JWT si existe
+//Cliente fetch hacia la API REST; agrega el token JWT si existe
 export async function api(path, { method = 'GET', body } = {}) {
   const token = localStorage.getItem('token');
   const res = await fetch(`/api${path}`, {

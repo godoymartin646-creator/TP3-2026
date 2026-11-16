@@ -4,7 +4,7 @@ import { Campo } from './Login.jsx';
 
 const VACIO = {};
 
-// Listado + formulario de alta, modificación y eliminación para una entidad
+//Listado + formulario de alta, modificación y eliminación de registros de una entidad. Recibe como props:
 export default function Crud({ titulo, ruta, campos, columnas }) {
   const [filas, setFilas] = useState([]);
   const [editandoId, setEditandoId] = useState(null);
