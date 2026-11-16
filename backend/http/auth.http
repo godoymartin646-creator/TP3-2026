@@ -1,0 +1,13 @@
+@base = http://localhost:3000/api
+
+### Registro
+POST {{base}}/auth/registro
+Content-Type: application/json
+
+{ "nombre": "Martin", "email": "martin@test.com", "contrasena": "123456" }
+
+### Login (copiar el token de la respuesta para los demás .http)
+POST {{base}}/auth/login
+Content-Type: application/json
+
+{ "email": "martin@test.com", "contrasena": "123456" }
